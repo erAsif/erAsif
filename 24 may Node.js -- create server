@@ -1,0 +1,35 @@
+// Create node js server using htm module
+
+// const http = require('http');
+// http.createServer((req , resp) => {
+//     resp.write('This is my first page');
+//     resp.end();
+
+// }).listen(4500);
+
+
+// Create node js server using http module and use HTML
+
+
+// const http = require('http');
+// function data(req , resp){
+// resp.write('<html><body><h2>Create server using http module</h2></body></html>');
+// resp.end();
+// }
+// http.createServer(data).listen(4500);
+
+
+
+// Create node js server using express module
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
